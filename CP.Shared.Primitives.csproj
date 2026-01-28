@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>enable</Nullable>
+    <!--NuGet Properties-->
+    <PackageId>CP.Shared.Primitives</PackageId>
+    <Version>0.1.10</Version>
+    <Authors>Ben</Authors>
+    <Company>Personal</Company>
+    <Description>
+      Pure, domain-agnostic primitive helpers shared across Cognitive Platform components.
+      This package contains small, stable utilities such as primitive extensions,
+      guard clauses, and result types that are safe to use by any CP client or service.
+      It intentionally contains no domain logic, no client behavior, and no API-specific concerns.
+    </Description>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <!--/NuGet Properties-->
+  </PropertyGroup>
+</Project>
