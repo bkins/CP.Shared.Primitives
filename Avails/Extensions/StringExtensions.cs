@@ -12,7 +12,7 @@ namespace CP.Shared.Primitives.Avails.Extensions
 
         public static bool HasValue (this string value)
         {
-            return IsEmptyNullOrWhiteSpace(value).Not();
+            return value.IsEmptyNullOrWhiteSpace().Not();
         }
 
         public static bool HasNoValue(this string value)
@@ -34,7 +34,19 @@ namespace CP.Shared.Primitives.Avails.Extensions
                                , other
                                , comparisonType).Not();
         }
-
+        
+        /// <summary>
+        /// Uses the current culture to compare the two strings, ignoring case (opposite of <see cref="IsEqualTo(string,string)"/>).
+        /// </summary>
+        /// <param name="source"></param>
+        /// <param name="other"></param>
+        /// <returns></returns>
+        public static bool IsNotEqualTo (this string      source
+                                       , string           other)
+        {
+            return string.Equals(source
+                               , other).Not();
+        }
         public static bool IsEqualTo (this string      source
                                     , string           other
                                     , StringComparison comparisonType)
@@ -42,6 +54,20 @@ namespace CP.Shared.Primitives.Avails.Extensions
             return string.Equals(source
                                , other
                                , comparisonType);
+        }
+        
+        /// <summary>
+        /// Uses the current culture to compare the two strings, ignoring case.
+        /// </summary>
+        /// <param name="source"></param>
+        /// <param name="other"></param>
+        /// <returns></returns>
+        public static bool IsEqualTo (this string      source
+                                    , string           other)
+        {
+            return string.Equals(source
+                               , other
+                               , StringComparison.CurrentCultureIgnoreCase);
         }
 
         public static bool IsInt (this string value)
