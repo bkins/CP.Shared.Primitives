@@ -10,14 +10,15 @@ namespace CP.Shared.Primitives.Avails.Extensions
             return string.IsNullOrEmpty(value) || string.IsNullOrWhiteSpace (value);
         }
 
-        public static bool HasValue (this string value)
+        public static bool HasValue (this string? value)
         {
-            return value.IsEmptyNullOrWhiteSpace().Not();
+            return value is { } 
+                && value.IsEmptyNullOrWhiteSpace().Not();
         }
 
         public static bool HasNoValue(this string value)
         {
-            return HasValue (value).Not();
+            return value.HasValue().Not();
         }
 
         public static bool DoesNotContain (this List<string> value

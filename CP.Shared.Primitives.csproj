@@ -4,7 +4,7 @@
     <Nullable>enable</Nullable>
     <!--NuGet Properties-->
     <PackageId>CP.Shared.Primitives</PackageId>
-    <Version>0.1.36</Version>
+    <Version>0.1.42</Version>
     <Authors>Ben</Authors>
     <Company>Personal</Company>
     <Description>
