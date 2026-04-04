@@ -14,6 +14,21 @@
       It intentionally contains no domain logic, no client behavior, and no API-specific concerns.
     </Description>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageIcon>appicon.png</PackageIcon>
     <!--/NuGet Properties-->
   </PropertyGroup>
+  <ItemGroup>
+    <None Remove="appicon.png" />
+    <Resource Include="appicon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <None Remove="appicon.svg" />
+    <Resource Include="appicon.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <None Remove="appicon.xcf" />
+    <Resource Include="appicon.xcf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
 </Project>

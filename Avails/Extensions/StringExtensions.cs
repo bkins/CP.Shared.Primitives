@@ -15,7 +15,7 @@ namespace CP.Shared.Primitives.Avails.Extensions
             return value is { } 
                 && value.IsEmptyNullOrWhiteSpace().Not();
         }
-
+        
         public static bool HasNoValue(this string value)
         {
             return value.HasValue().Not();
